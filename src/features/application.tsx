@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { createGlobalStyle } from "styled-components";
 import { StudentsPage } from "features/students";
 
@@ -14,7 +14,7 @@ const Global = createGlobalStyle`
   }
 `;
 
-export const Application = () => {
+export const Application: React.FC = () => {
   return (
     <>
       <Global />
