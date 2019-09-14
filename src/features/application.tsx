@@ -1,6 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { Students } from "features/students/index";
+import { StudentsPage } from "features/students";
 
 const Global = createGlobalStyle`
   * {
@@ -18,7 +18,7 @@ export const Application = () => {
   return (
     <>
       <Global />
-      <Students />
+      <StudentsPage />
     </>
   );
 };
