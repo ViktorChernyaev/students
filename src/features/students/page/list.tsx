@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import * as React from "react";
 import { useStore } from "effector-react";
 import { $students, getStudentsList, openForm, deleteStudent } from "../service";
 
-export const StudentsList = () => {
+export const StudentsList: React.FC = () => {
   const students = useStore($students);
   const loading = useStore(getStudentsList.pending);
 
-  useEffect(() => {
+  React.useEffect(() => {
     getStudentsList();
   }, []);
 
   if (loading) {
-    return "loading...";
+    return <div>loading...</div>;
   }
 
   return (
