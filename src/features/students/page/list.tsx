@@ -51,7 +51,7 @@ export const StudentsList: React.FC = () => {
 
   return (
     <HalfedPanel>
-      <HeadedButton onClick={() => openForm()} value="CREATE" />
+      <HeadedButton onClick={() => openForm()} value="CREATE" readOnly />
       <Table>
         <thead>
           <tr>
