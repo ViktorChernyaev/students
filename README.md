@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+DEMO: https://vc-students.herokuapp.com/
+
 ### Задача
 
 Реализовать страницу, на которой будет отображаться список студентов, а также будут возможности:
