@@ -2,7 +2,7 @@ import { SyntheticEvent } from "react";
 import { createDomain } from "effector";
 import { addIdToObj } from "lib/id";
 import { getStorageData, setStorageData } from "lib/storage";
-import { Student, Inputvalue } from "./types";
+import { Student, Inputvalue, RATING_PERFECT } from "./types";
 
 const StudentsDomain = createDomain();
 
@@ -14,7 +14,7 @@ getStudentsList.use(() => {
   return getStorageData("students").then((students: Student[]) => students || []);
 });
 
-const EMPTY_FORM: Student = { name: "", date: "", rating: 0 };
+const EMPTY_FORM: Student = { name: "", date: "", rating: RATING_PERFECT };
 export const $form = StudentsDomain.store<Student>(EMPTY_FORM);
 export const $isFormOpened = $form.map(form => "i" in form);
 export const openForm = StudentsDomain.event<void | Student>("open form");
