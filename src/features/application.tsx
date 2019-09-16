@@ -8,9 +8,12 @@ const Global = createGlobalStyle`
   }
 
   body {
-    font-family: "Roboto", sans-serif;
-    overflow-x: hidden;
+    min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
+    background-color: #e4e5e6;
+    color: #23282c;
+    font-family: "Roboto", sans-serif;
   }
 `;
 
